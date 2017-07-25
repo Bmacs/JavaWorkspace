@@ -2,7 +2,7 @@ package myPackage;
 
 public class Boat implements Vehicle {
 	
-	@Override
+	
 	public void drive() {
 		// TODO Auto-generated method stub
 		System.out.println("drive in water");

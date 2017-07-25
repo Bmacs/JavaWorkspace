@@ -46,10 +46,31 @@ public class duck {
 	public void setColor(String color) {
 		this.color = color;
 	}
+	
+	public void fly() {
+		System.out.println("Flap Flap Flap");
+	}
+	
+	public void display() {
+		System.out.println("Raises wing");
+	}
+	
+	public void quack() {
+		System.out.println("Quack");
+		
+	}
 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		duck Duck = new duck();
+		Duck.quack();
+		Duck.fly();
+		Duck.display();
+		Duck.setWingSpan(20);
+		Duck.setColor("Yellow");
+		Duck.setEyes(2);
+		Duck.setLegs(2);
 
 	}
 

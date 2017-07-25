@@ -1,10 +1,10 @@
 package myPackage;
 
-public abstract class Vehicle {
+public interface Vehicle {
 	
-	public void lightsOn() {
-		System.out.println("lights on");
-	}
+//	public void lightsOn() {
+//		System.out.println("lights on");
+//	}
 
 	abstract void drive();
 	
