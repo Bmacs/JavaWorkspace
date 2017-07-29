@@ -1,3 +1,4 @@
+import java.util.concurrent.TimeUnit;
 
 public class Grid {
 
@@ -9,6 +10,7 @@ public class Grid {
 	int b = 0;
 	public void makeGrid() {
 		// TODO Auto-generated constructor stub
+		
 		 int l = 0; 
 
 			for (int k = 0; k < num; k++) {
