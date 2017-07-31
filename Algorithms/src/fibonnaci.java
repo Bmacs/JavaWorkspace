@@ -17,7 +17,7 @@ public class fibonnaci {
 		
 		
 		
-		long times = 45;
+		long times = 55;
 		
 		
 		for (int i = 0; i < times; i++) {
