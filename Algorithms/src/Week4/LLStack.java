@@ -12,6 +12,26 @@ public class LLStack {
     }
 
     public boolean isEmpty() {
-        
+        return list.isEmpty();
+    }
+
+    public Object peek() {
+        if (isEmpty())
+            throw new java.util.EmptyStackException();
+        return list.getLast();
+    }
+
+    public Object pop() {
+        if (isEmpty())
+            throw new java.util.EmptyStackException();
+        return list.removeLast();
+    }
+
+    public void push(Object el) {
+        list.addLast(el);
+    }
+
+    public String toString() {
+        return list.toString();
     }
 }

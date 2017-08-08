@@ -80,4 +80,24 @@ public class IntSLList {
 				}
 			}
 	}
+
+	public void sum() { // add all numbers in list
+
+	}
+
+	public void max() { // find the biggest number
+
+	}
+
+	public void min() { // find the smallest number
+
+	}
+
+	public void removeDuplicates() { // remove elements that have the same number
+
+	}
+
+	public void removeMedian() { // remove the middle number from the list
+
+	}
 }
