@@ -1,18 +1,16 @@
 package Week4FactoryMethod;
 
-public class NYPizzaStore extends PizzaStore {
-
+public class ChicagoStore extends PizzaStore {
     protected Pizza createPizza(String item) {
         if (item.equalsIgnoreCase("cheese"))
-            return new NYStyleCheesePizza();
+            return new ChicagoStyleCheesePizza();
         else if (item.equalsIgnoreCase("veggie"))
-            return new NYStyleVeggiePizza();
+            return new ChicagoStyleVeggiePizza();
         else if (item.equalsIgnoreCase("clam"))
-            return new NYStyleClamPizza();
+            return new ChicagoStyleClamPizza();
         else if (item.equalsIgnoreCase("pepperoni"))
-            return new NYStylePepperoniPizza();
+            return new ChicagoStylePepperoniPizza();
         else
             return null;
     }
-
 }
