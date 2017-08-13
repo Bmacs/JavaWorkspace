@@ -8,21 +8,21 @@ public class PancakeHouseMenu2 {
     public PancakeHouseMenu2() {
         menuItems = new MenuItem[MAX_ITEMS];
 
-        addItem("Vegetarian BLT",
-                "(Fakin') Bacon with lettuce & tomato on whole wheat",
+        addItem("K&B's Pancake Breakfast",
+                "Pancakes with scrambled eggs, and toast",
                 true, 2.99);
 
-        addItem("BLT",
-                "Bacon with lettuce & tomato on whole wheat",
+        addItem("Regular Pancake Breakfast",
+                "Pancakes with scrambled eggs, and toast",
                 false, 2.99);
 
-        addItem("Soup of the day",
-                "Soup of the day, with a side of potato salad",
-                false, 3.29);
+        addItem("Blueberry Pancakes",
+                "Pancakes made with fresh blueberries",
+                true, 3.49);
 
-        addItem("Hotdog",
-                "A hot dog, with saurkraut, relish, onions, topped with cheese",
-                false, 3.05);
+        addItem("Waffles",
+                "Waffles, with your choice of blueberries or strawberries",
+                true, 3.59);
     }
 
     public void addItem(String name, String description, boolean vegetarian, double price) {
