@@ -8,4 +8,13 @@ public class Poodle extends Dog {
         Hair.add("Short Curly");
     }
 
+    public void Bark() {
+        System.out.println("Bark: WOOF WOOF");
+    }
+
+    public void Growl() {
+        System.out.println("Growl: Growls loudly");
+
+    }
+
 }

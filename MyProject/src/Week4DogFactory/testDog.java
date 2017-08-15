@@ -3,17 +3,15 @@ package Week4DogFactory;
 public class testDog {
         public static void main(String[] args)
         {
+            DogStore ds = new DogFactory();
 
-            Dog dog = DogFactory.getDog("small");
-            System.out.println("Ordered a " + dog.getColor() + " " + dog.getType());
-            dog.Bark();
+            Dog dog = ds.orderDog("small");
+            System.out.println("Customer ordered a " + dog.getColor() + " " + dog.getType());
 
-            dog = DogFactory.getDog("medium");
-            System.out.println("Ordered a " + dog.getColor() + " " + dog.getType());
-            dog.Bark();
+            dog = ds.orderDog("medium");
+            System.out.println("Customer ordered a " + dog.getColor() + " " + dog.getType());
 
-            dog = DogFactory.getDog("big");
-            System.out.println("Ordered a " + dog.getColor() + " " + dog.getType());
-            dog.Bark();
+            dog = ds.orderDog("big");
+            System.out.println("Customer ordered a " + dog.getColor() + " " + dog.getType());
         }
 }

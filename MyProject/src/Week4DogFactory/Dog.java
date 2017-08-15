@@ -8,21 +8,20 @@ public abstract class Dog {
 
     ArrayList<String> Hair = new ArrayList<>();
 
-    public void createDog() {
+    void createDog() {
         System.out.println("3...");
         System.out.println("2...");
         System.out.println("1...");
         System.out.println("Poof");
         System.out.println("You got a new dog");
+        for (int i = 0; i < Hair.size(); i++) {
+            System.out.println(" Hair: " + Hair.get(i));
+        }
     }
 
-    void Bark() {
-        System.out.println("Woof!");
-    }
+    abstract void Bark();
 
-    void Growl() {
-        System.out.println("Growl");
-    }
+    abstract void Growl();
 
     public String getType() {
         return type;

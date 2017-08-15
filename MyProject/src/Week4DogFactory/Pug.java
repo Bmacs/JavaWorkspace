@@ -7,4 +7,12 @@ public class Pug extends Dog {
 
         Hair.add("Short");
     }
+
+    public void Bark() {
+        System.out.println("Bark: Woof");
+    }
+
+    public void Growl() {
+        System.out.println("Growl: Growls quietly");
+    }
 }

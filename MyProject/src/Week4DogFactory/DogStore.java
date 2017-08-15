@@ -7,6 +7,7 @@ public abstract class DogStore {
 
         dog = getDog(type);
 
+        dog.createDog();
         dog.Bark();
         dog.Growl();
 

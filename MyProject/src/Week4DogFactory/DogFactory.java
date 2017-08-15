@@ -1,7 +1,7 @@
 package Week4DogFactory;
 
-public class DogFactory {
-    public static Dog getDog(String type)
+public class DogFactory extends DogStore {
+    protected Dog getDog(String type)
     {
         if ( type.equals("small") )
             return new Pug();
