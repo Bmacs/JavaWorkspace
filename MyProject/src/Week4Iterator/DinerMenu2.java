@@ -23,6 +23,14 @@ public class DinerMenu2 {
         addItem("Hotdog",
                 "A hot dog, with saurkraut, relish, onions, topped with cheese",
                 false, 3.05);
+
+        addItem("Steamed Veggies and Brown Rice",
+                "Steamed vegetables over brown rice",
+                false, 3.99);
+
+        addItem("Pasta",
+                "Spaghetti with Marinara Sauce, and a slice of sourdough break",
+                false, 3.89);
     }
 
     public void addItem(String name, String description, boolean vegetarian, double price) {
