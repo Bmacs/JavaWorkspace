@@ -82,7 +82,7 @@ public class IntSLList {
 	}
 
 	public void sum() { // add all numbers in list
-		int sum = 0;
+		for (int i =0; i < ; i++)
 	}
 
 	public void max() { // find the biggest number

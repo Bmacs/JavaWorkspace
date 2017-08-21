@@ -29,7 +29,7 @@ public class DinerMenu2 {
                 false, 3.99);
 
         addItem("Pasta",
-                "Spaghetti with Marinara Sauce, and a slice of sourdough break",
+                "Spaghetti with Marinara Sauce, and a slice of sourdough bread",
                 false, 3.89);
     }
 

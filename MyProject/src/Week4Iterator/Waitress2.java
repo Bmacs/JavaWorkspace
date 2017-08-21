@@ -15,9 +15,11 @@ public class Waitress2 {
     public void printMenu() {
         Iterator dinerIterator = dinerMenu.createIterator();
         Iterator pancakeIterator = pancakeHouseMenu.createIterator();
-        System.out.println("MENU\n----\nLunch");
-        printMenu(dinerIterator);
+        System.out.println("MENU\n----\nBreakfast");
         printMenu(pancakeIterator);
+        System.out.println("\n----\nLunch");
+        printMenu(dinerIterator);
+
     }
 
     private void printMenu(Iterator iterator) {
