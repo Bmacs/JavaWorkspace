@@ -81,9 +81,9 @@ public class IntSLList {
 			}
 	}
 
-	public void sum() { // add all numbers in list
-		for (int i =0; i < ; i++)
-	}
+//	public void sum() { // add all numbers in list
+//		for (int i =0; i < ; i++)
+//	}
 
 	public void max() { // find the biggest number
 

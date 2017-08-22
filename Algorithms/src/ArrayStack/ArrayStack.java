@@ -19,8 +19,13 @@ public class ArrayStack {
     }
 
     public void push(int element) {
-        data[count] = element;
-        count++;
+        if (data.length > size()) {
+            data[count] = element;
+            count++;
+        }
+        else
+            System.out.println("Stack Overflow");
+
     }
 
     public int pop() {

@@ -3,7 +3,7 @@ package ArrayStack;
 public class Driver {
     public static void main(String[] args) {
 
-        ArrayStack as = new ArrayStack(15);
+        ArrayStack as = new ArrayStack(2);
 
         as.push(10);
 
@@ -19,7 +19,9 @@ public class Driver {
 
         System.out.println(as.pop()); // this should print 5
 
-        System.out.println(as.indexOf(11));
+        //System.out.println(as.pop());
+
+        //System.out.println(as.indexOf(11));
 
     }
 }
