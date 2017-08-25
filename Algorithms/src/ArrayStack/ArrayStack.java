@@ -19,8 +19,13 @@ public class ArrayStack {
     }
 
     public void push(int element) {
+        if (data.length < as) {
+            extendArray();
+        }
+        else {
             data[count] = element;
             count++;
+        }
     }
 
     public int pop() {
@@ -51,6 +56,13 @@ public class ArrayStack {
         }
         //return the location (index of the number within the stack)...else return -1 if the element is not present
         return -1;
+    }
+
+    public int extendArray(int[] array){
+        int[] newArray = data.clone();
+        array = new int[array.length + 1];
+        System.arraycopy(newArray, 0, array, 0, newArray.length);
+        return array;
     }
 
 }
