@@ -1,3 +1,4 @@
+package LinkedListLab;
 
 public class IntSLList {
 	protected IntSLLNode head, tail;
@@ -14,6 +15,7 @@ public class IntSLList {
 		head = new IntSLLNode(el, head);
 		if (tail == null)
 			tail = head;
+		size++;
 	}
 	
 	public void addToTail(int el) {
@@ -22,6 +24,7 @@ public class IntSLList {
 			tail = tail.next;
 		}
 		else head = tail = new IntSLLNode(el);
+		size++;
 	}
 	
 	public int deleteFromHead() {
@@ -31,7 +34,7 @@ public class IntSLList {
 		}
 		else {
 			head = head.next;
-			
+			size--;
 		}
 		return el;
 	}
@@ -46,19 +49,20 @@ public class IntSLList {
 			for (tmp = head; tmp.next != tail; tmp = tmp.next);
 			tail = tmp;
 			tail.next = null;
+			size--;
 		}
 		return el;
 	}
 	
 	public void printAll() {
 		for (IntSLLNode tmp = head; tmp != null; tmp = tmp.next) {
-		System.out.println(tmp.info + " ");
+			System.out.println(tmp.info + " ");
 		}
 	}
 	
 	public boolean isInList(int el) {
 		IntSLLNode tmp;
-		for (tmp = head; tmp != null && tmp.info != el; tmp = tmp.next );
+		for (tmp = head; tmp != null && tmp.info != el; tmp = tmp.next);
 		return tmp != null;
 	}
 	
@@ -82,32 +86,30 @@ public class IntSLList {
 			}
 	}
 
-	public void Sum() {
+	public int Sum() {
 		int sum = 0;
 		for (IntSLLNode tmp = head; tmp != null; tmp = tmp.next) {
-		sum = sum + tmp.info;
+			sum = sum + tmp.info;
 		}
-		System.out.println("The sum of the numbers is: " + sum);
+		return sum;
 	}
 
-	public void Max() {
-		int Max = 0;
+	public int Max() {
+		int max = 0;
 		for (IntSLLNode tmp = head; tmp != null; tmp = tmp.next) {
-			if (tmp.info > Max) {
-				Max = tmp.info;
-			}
+			if (tmp.info > max)
+				max = tmp.info;
 		}
-		System.out.println("The Largest number is: " + Max);
+		return max;
 	}
 
-	public void Min() {
-		int Min = head.info;
+	public int Min() {
+		int min = head.info;
 		for (IntSLLNode tmp = head; tmp != null; tmp = tmp.next) {
-			if (tmp.info < Min) {
-				Min = tmp.info;
-			}
+			if (tmp.info < min)
+				min = tmp.info;
 		}
-		System.out.println("The Smallest number is: " + Min);
+		return min;
 	}
 
 	public int getSize() {
@@ -120,11 +122,10 @@ public class IntSLList {
 			int num = tmp.info;
 			dup = 0;
 			for (IntSLLNode temp = head; temp != null; temp = temp.next) {
-				if (num == temp.info) {
+				if (num == temp.info)
 					dup++;
-				}
 				if (num == temp.info && dup == 2) {
-					System.out.println("deleting duplicates " + temp.info);
+					System.out.println("removing " + temp.info);
 					delete(temp.info);
 					size--;
 				}
@@ -134,8 +135,8 @@ public class IntSLList {
 
 	public void removeMedian() {
 		sort();
-		int medium = findMiddle();
-		delete(medium);
+		int median = findMiddle();
+		delete(median);
 	}
 
 	public int findMiddle() {
@@ -163,21 +164,17 @@ public class IntSLList {
 				while (next != null) {
 					if (current.info > next.info) {
 						changed = true;
-
 						if (previous != null) {
 							IntSLLNode sig = next.next;
-
 							previous.next = next;
 							next.next = current;
 							current.next = sig;
 						} else {
 							IntSLLNode sig = next.next;
-
 							head = next;
 							next.next = current;
 							current.next = sig;
 						}
-
 						previous = next;
 						next = current.next;
 					} else {

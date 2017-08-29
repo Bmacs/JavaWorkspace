@@ -4,11 +4,10 @@ public class ArrayStack {
 
     int count = 0;
     private int[] data;
+    private int[] data2;
 
     public ArrayStack(int size) {
-
         data = new int[size];
-
     }
 
     public void clear() {
@@ -19,13 +18,12 @@ public class ArrayStack {
     }
 
     public void push(int element) {
-        if (data.length < as) {
+        // test against the array first then add element
+        if (size() == data.length) {
             extendArray();
         }
-        else {
-            data[count] = element;
-            count++;
-        }
+        data[count] = element;
+        count++;
     }
 
     public int pop() {
@@ -38,14 +36,11 @@ public class ArrayStack {
         //implement size the array
     }
 
-
-
-    public boolean find(int element) {
+    public boolean find(int element) { // return true if the number is in the stack
         for (int i = 0; i < size(); i++) {
             if (element == data[i])
                 return true;
         }
-               // return true if the number is in the stack
         return false;
     }
 
@@ -58,11 +53,10 @@ public class ArrayStack {
         return -1;
     }
 
-    public int extendArray(int[] array){
+    public void extendArray(){
         int[] newArray = data.clone();
-        array = new int[array.length + 1];
-        System.arraycopy(newArray, 0, array, 0, newArray.length);
-        return array;
+        data2 = new int[newArray.length*2];
+        System.arraycopy(newArray, 0, data2, 0, newArray.length);
+        data = data2;
     }
-
 }

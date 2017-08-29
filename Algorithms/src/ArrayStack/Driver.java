@@ -15,11 +15,27 @@ public class Driver {
 
         as.push(5);
 
+        System.out.println("Size:");
         System.out.println(as.size()); // this should print 5
 
+        System.out.println("Pop:");
         System.out.println(as.pop()); // this should print 5
 
-        //System.out.println(as.pop());
+        System.out.println("Index of 11:");
+        System.out.println(as.indexOf(11));
+
+        System.out.println("Find 1 True OR False:");
+        System.out.println(as.find(1));
+
+
+
+        System.out.println("Size:");
+        System.out.println(as.size());
+
+        as.clear();
+
+        System.out.println("Size:");
+        System.out.println(as.size());
 
         //System.out.println(as.indexOf(11));
 
