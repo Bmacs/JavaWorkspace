@@ -14,6 +14,22 @@ public class ConsoleBoxTest {
         OnPysicalFitnessDevice onPysicalFitnessDevice = new OnPysicalFitnessDevice(physicalFitnessDevice);
         OffPhysicalFitnessDevice offPhysicalFitnessDevice = new OffPhysicalFitnessDevice(physicalFitnessDevice);
 
+        System.out.println("<---- Brain Wave Device ---->");
+        onBrainWaveDevice.execute();
+        System.out.println();
+        offBrainWaveDevice.execute();
+        System.out.println();
+        System.out.println("<---- Mouse Device ---->");
+        onMouseDevice3d.execute();
+        System.out.println();
+        offMouseDevice3d.execute();
+        System.out.println();
+        System.out.println("<---- Physical Fitness Device ---->");
+        onPysicalFitnessDevice.execute();
+        System.out.println();
+        offPhysicalFitnessDevice.execute();
+
+
 
     }
 }
