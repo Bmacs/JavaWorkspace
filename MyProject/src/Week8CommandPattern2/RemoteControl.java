@@ -38,4 +38,8 @@ public class RemoteControl {
         }
         return stringBuff.toString();
     }
+
+    public void undoButtonWasPushed(int slot) {
+        onCommands[slot].execute();
+    }
 }
