@@ -14,7 +14,7 @@ public class Bubble2 {
             System.out.println("Pass = " + pass);
             for (int compares = 0; compares < len-pass; compares++) {
                 System.out.println(compares);
-                if (data[compares].compareTo(data[compares+1]) < 0) {
+                if (data[compares].compareTo(data[compares+1]) > 0) {
                     // swap
                     String temp = data[compares];
                     data[compares] = data[compares + 1];
